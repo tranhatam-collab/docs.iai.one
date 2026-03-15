@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#060816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <title>DOCS.IAI.ONE — Documentation Portal</title>
+  <meta
+    name="description"
+    content="DOCS.IAI.ONE là cổng tài liệu của hệ IAI. Phiên bản hiện tại là trang công bố tạm thời trước khi docs chính thức được mở."
+  />
+  <meta
+    name="keywords"
+    content="docs.iai.one, IAI documentation, IAI docs, IAI system docs, flow docs, charter docs"
+  />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://docs.iai.one/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IAI.ONE" />
+  <meta property="og:title" content="DOCS.IAI.ONE — Documentation Portal" />
+  <meta
+    property="og:description"
+    content="Trang công bố tạm thời cho hệ tài liệu IAI trước khi docs chính thức được phát hành."
+  />
+  <meta property="og:url" content="https://docs.iai.one/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.jpg" />
+  <meta property="og:locale" content="vi_VN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DOCS.IAI.ONE — Documentation Portal" />
+  <meta
+    name="twitter:description"
+    content="Trang công bố tạm thời cho hệ tài liệu IAI trước khi docs chính thức được phát hành."
+  />
+  <meta name="twitter:image" content="https://docs.iai.one/assets/og-docs.jpg" />
+
+  <style>
+    :root{
+      --bg:#060816;
+      --bg-soft:#0b1020;
+      --panel:rgba(14,20,36,.72);
+      --text:#edf3ff;
+      --muted:#9aa8c8;
+      --muted-2:#c9d3ea;
+      --line:rgba(255,255,255,.08);
+      --line-strong:rgba(255,255,255,.16);
+      --accent:#73e0ff;
+      --accent-2:#8f7cff;
+      --accent-3:#85ffd5;
+      --shadow:0 24px 80px rgba(0,0,0,.45);
+      --shadow-soft:0 14px 40px rgba(0,0,0,.28);
+      --container:min(1120px, calc(100vw - 32px));
+      --transition:260ms cubic-bezier(.22,.61,.36,1);
+    }
+
+    *,
+    *::before,
+    *::after{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      min-width:320px;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 16% 12%, rgba(115,224,255,.08), transparent 30%),
+        radial-gradient(circle at 84% 16%, rgba(143,124,255,.1), transparent 34%),
+        radial-gradient(circle at 50% 82%, rgba(133,255,213,.05), transparent 28%),
+        linear-gradient(180deg, #050712 0%, #070b17 48%, #050712 100%);
+      font:400 16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing:.01em;
+      overflow-x:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .site-bg{
+      position:fixed;
+      inset:0;
+      z-index:-10;
+      pointer-events:none;
+    }
+
+    .bg-grid{
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:40px 40px;
+      mask-image:radial-gradient(circle at 50% 35%, #000, transparent 82%);
+    }
+
+    .bg-orb{
+      position:absolute;
+      border-radius:50%;
+      filter:blur(90px);
+      opacity:.42;
+    }
+
+    .orb-a{
+      width:320px;
+      height:320px;
+      left:-70px;
+      top:70px;
+      background:rgba(115,224,255,.18);
+    }
+
+    .orb-b{
+      width:420px;
+      height:420px;
+      right:-120px;
+      top:240px;
+      background:rgba(143,124,255,.18);
+    }
+
+    .orb-c{
+      width:340px;
+      height:340px;
+      left:36%;
+      bottom:-120px;
+      background:rgba(133,255,213,.10);
+    }
+
+    .container{
+      width:var(--container);
+      margin:0 auto;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:120;
+      background:rgba(4,7,16,.52);
+      border-bottom:1px solid transparent;
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      transition:background var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .site-header.is-scrolled{
+      background:rgba(4,7,16,.82);
+      border-color:var(--line);
+      box-shadow:0 10px 40px rgba(0,0,0,.28);
+    }
+
+    .header-inner{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      background:
+        radial-gradient(circle at 35% 35%, #fff, var(--accent) 38%, rgba(115,224,255,.12) 66%, transparent 72%);
+      box-shadow:0 0 28px rgba(115,224,255,.5);
+      flex:0 0 auto;
+    }
+
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      line-height:1.05;
+    }
+
+    .brand-copy strong{
+      font-size:14px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .brand-copy em{
+      color:var(--muted);
+      font-style:normal;
+      font-size:11px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .header-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .header-links a{
+      position:relative;
+      color:var(--muted-2);
+      font-size:14px;
+      transition:color var(--transition);
+    }
+
+    .header-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:100%;
+      height:1px;
+      background:linear-gradient(90deg, rgba(115,224,255,.95), rgba(143,124,255,.95));
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform var(--transition);
+    }
+
+    .header-links a:hover,
+    .header-links a:focus-visible{
+      color:var(--text);
+    }
+
+    .header-links a:hover::after,
+    .header-links a:focus-visible::after{
+      transform:scaleX(1);
+    }
+
+    .page{
+      min-height:calc(100vh - 76px);
+      display:flex;
+      align-items:center;
+      padding:48px 0 64px;
+    }
+
+    .hero-shell{
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .glass{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+
+    .hero-card,
+    .side-card{
+      border-radius:32px;
+      padding:28px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:16px;
+      color:var(--accent);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:28px;
+      height:1px;
+      background:linear-gradient(90deg, rgba(115,224,255,0), rgba(115,224,255,.95));
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(40px, 5vw, 72px);
+      line-height:.98;
+      letter-spacing:-.05em;
+      max-width:780px;
+    }
+
+    .hero-lead{
+      margin:20px 0 0;
+      max-width:760px;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .notice{
+      margin-top:24px;
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted-2);
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:28px;
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:52px;
+      padding:0 18px;
+      border-radius:999px;
+      font-weight:800;
+      transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+      border:1px solid transparent;
+    }
+
+    .button:hover{
+      transform:translateY(-2px);
+    }
+
+    .button-primary{
+      color:#061018;
+      background:linear-gradient(135deg, var(--accent), var(--accent-3));
+      box-shadow:0 10px 28px rgba(115,224,255,.22);
+    }
+
+    .button-secondary{
+      color:var(--text);
+      background:rgba(255,255,255,.04);
+      border-color:var(--line);
+    }
+
+    .button-ghost{
+      color:var(--text);
+      background:transparent;
+      border-color:var(--line);
+    }
+
+    .meta-grid{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:14px;
+    }
+
+    .meta-card{
+      min-height:116px;
+      padding:18px;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .meta-card strong{
+      display:block;
+      font-size:28px;
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    .meta-card span{
+      display:block;
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .side-card{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .stack-item{
+      padding:18px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+
+    .stack-item h3{
+      margin:0 0 10px;
+      font-size:22px;
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+
+    .stack-item p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .stack-item a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:14px;
+      color:var(--accent);
+      font-weight:800;
+    }
+
+    .stack-item a::after{
+      content:"↗";
+    }
+
+    .site-footer{
+      padding:0 0 42px;
+    }
+
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      padding-top:12px;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-copy{
+      color:var(--muted);
+      max-width:760px;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+    }
+
+    .footer-links a{
+      position:relative;
+      color:var(--muted-2);
+      font-size:14px;
+      transition:color var(--transition);
+    }
+
+    .footer-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:100%;
+      height:1px;
+      background:linear-gradient(90deg, rgba(115,224,255,.95), rgba(143,124,255,.95));
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform var(--transition);
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible{
+      color:var(--text);
+    }
+
+    .footer-links a:hover::after,
+    .footer-links a:focus-visible::after{
+      transform:scaleX(1);
+    }
+
+    @media (max-width:980px){
+      .hero-shell{
+        grid-template-columns:1fr;
+      }
+
+      .meta-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+    @media (max-width:640px){
+      :root{
+        --container:min(1120px, calc(100vw - 24px));
+      }
+
+      .header-inner{
+        min-height:70px;
+      }
+
+      .brand-copy em{
+        display:none;
+      }
+
+      .header-links{
+        display:none;
+      }
+
+      .actions{
+        width:100%;
+      }
+
+      .actions .button{
+        width:100%;
+      }
+
+      .hero-card,
+      .side-card{
+        border-radius:24px;
+        padding:22px;
+      }
+
+      h1{
+        font-size:clamp(34px, 12vw, 56px);
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *,
+      *::before,
+      *::after{
+        animation:none !important;
+        transition:none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+    <div class="bg-orb orb-c"></div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="DOCS.IAI.ONE">
+        <span class="brand-mark"></span>
+        <span class="brand-copy">
+          <strong>DOCS.IAI.ONE</strong>
+          <em>Documentation Portal</em>
+        </span>
+      </a>
+
+      <nav class="header-links" aria-label="Điều hướng chính">
+        <a href="https://home.iai.one/" target="_blank" rel="noopener">Home</a>
+        <a href="https://iai.one/" target="_blank" rel="noopener">IAI.ONE</a>
+        <a href="https://flow.iai.one/" target="_blank" rel="noopener">Flow</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <div class="container">
+      <div class="hero-shell">
+        <section class="hero-card glass" aria-labelledby="docs-title">
+          <div class="eyebrow">TEMPORARY DOCUMENTATION GATE</div>
+          <h1 id="docs-title">DOCS.IAI.ONE đang ở phiên bản công bố tạm thời.</h1>
+          <p class="hero-lead">
+            Tài liệu chính thức của hệ IAI sẽ được phát hành tại cổng docs riêng khi cấu trúc tài liệu, chuẩn công bố và đường dẫn xuất bản được hoàn thiện đầy đủ.
+          </p>
+
+          <div class="notice">
+            Trong giai đoạn hiện tại, trang này giữ vai trò điểm neo công khai cho Documentation Portal và dẫn người dùng về các lớp hệ thống chính đang hoạt động.
+          </div>
+
+          <div class="actions">
+            <a class="button button-primary" href="https://home.iai.one/" target="_blank" rel="noopener">
+              Go to HOME.IAI.ONE
+            </a>
+            <a class="button button-secondary" href="https://iai.one/" target="_blank" rel="noopener">
+              Read IAI Charter
+            </a>
+            <a class="button button-ghost" href="https://flow.iai.one/" target="_blank" rel="noopener">
+              Open Flow
+            </a>
+          </div>
+
+          <div class="meta-grid" aria-label="Thông tin tóm tắt">
+            <article class="meta-card">
+              <strong>01</strong>
+              <span>Tạm thời là trang công bố Documentation Portal</span>
+            </article>
+            <article class="meta-card">
+              <strong>02</strong>
+              <span>Docs chính thức sẽ mở tại domain docs riêng của hệ</span>
+            </article>
+            <article class="meta-card">
+              <strong>03</strong>
+              <span>Hiện tại ưu tiên đọc Charter, Home và Flow trước</span>
+            </article>
+          </div>
+        </section>
+
+        <aside class="side-card glass" aria-label="Điều hướng tài liệu tạm thời">
+          <article class="stack-item">
+            <h3>IAI Charter</h3>
+            <p>
+              Đọc lớp định nghĩa gốc, principles, boundaries và logic toàn hệ tại IAI.ONE.
+            </p>
+            <a href="https://iai.one/" target="_blank" rel="noopener">Open IAI.ONE</a>
+          </article>
+
+          <article class="stack-item">
+            <h3>System Portal</h3>
+            <p>
+              Dùng HOME.IAI.ONE để nhìn bản đồ hệ thống trước khi đi vào bất kỳ lớp cụ thể nào.
+            </p>
+            <a href="https://home.iai.one/" target="_blank" rel="noopener">Open Home</a>
+          </article>
+
+          <article class="stack-item">
+            <h3>Infrastructure Flagship</h3>
+            <p>
+              Nếu cần platform orchestration và infrastructure layer, đi vào Flow.
+            </p>
+            <a href="https://flow.iai.one/" target="_blank" rel="noopener">Open Flow</a>
+          </article>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        DOCS.IAI.ONE hiện là trang công bố tạm thời cho Documentation Portal của hệ IAI.
+      </div>
+
+      <nav class="footer-links" aria-label="Liên kết footer">
+        <a href="https://home.iai.one/" target="_blank" rel="noopener">home.iai.one</a>
+        <a href="https://iai.one/" target="_blank" rel="noopener">iai.one</a>
+        <a href="https://flow.iai.one/" target="_blank" rel="noopener">flow.iai.one</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+      const header = document.querySelector(".site-header");
+      function updateHeader() {
+        if (!header) return;
+        header.classList.toggle("is-scrolled", window.scrollY > 10);
+      }
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+    })();
+  </script>
+</body>
+</html>
