@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>API Reference • IAI Documentation</title>
+  <meta name="description" content="Base URL, auth model, endpoint groups, and response format for IAI APIs." />
+  <meta name="theme-color" content="#050816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://docs.iai.one/api/" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="API Reference • IAI Documentation" />
+  <meta property="og:description" content="Flow, execution, and mail APIs with current auth behavior and response contracts." />
+  <meta property="og:url" content="https://docs.iai.one/api/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
+  <link rel="stylesheet" href="/assets/docs.css" />
+</head>
+<body data-page="api">
+  <button class="sidebar-scrim" type="button" data-sidebar-close aria-label="Close sidebar"></button>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" data-sidebar></aside>
+    <div class="docs-workspace">
+      <header class="docs-topbar">
+        <div class="topbar-inner">
+          <nav class="topbar-links" aria-label="Product surfaces">
+            <a href="https://home.iai.one" target="_blank" rel="noreferrer">Home</a>
+            <a href="https://app.iai.one" target="_blank" rel="noreferrer">App</a>
+            <a href="https://flow.iai.one" target="_blank" rel="noreferrer">Flow</a>
+            <a href="https://mail.iai.one" target="_blank" rel="noreferrer">Mail</a>
+            <a href="https://api.iai.one" target="_blank" rel="noreferrer">API</a>
+          </nav>
+          <div class="topbar-actions">
+            <button class="topbar-action" type="button" data-search-open>Search</button>
+            <a class="topbar-action" href="/security/">Security</a>
+            <button class="menu-button" type="button" data-sidebar-toggle>Menu</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="docs-layout">
+        <main class="doc-page">
+          <article class="doc-content">
+            <section class="doc-hero hero-card">
+              <span class="eyebrow">API Reference</span>
+              <h1 class="page-title">Current Platform Contracts</h1>
+              <p class="page-intro">The API surface is intentionally compact in MVP form: flows, executions, and mail delivery, with session access now and token auth planned later.</p>
+            </section>
+
+            <section class="doc-section card" id="base-url">
+              <h2>Base URL</h2>
+              <pre><code>https://api.iai.one</code></pre>
+            </section>
+
+            <section class="doc-section card" id="auth">
+              <h2>Auth</h2>
+              <div class="grid-2">
+                <article class="card">
+                  <h3>Current</h3>
+                  <p>Session-based access is the active model for the current platform phase.</p>
+                </article>
+                <article class="card">
+                  <h3>Future</h3>
+                  <p>Token-based auth will be added as the dedicated identity and SDK layers mature.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="flow-endpoints">
+              <h2>Flow Endpoints</h2>
+              <div class="section-stack">
+                <p class="endpoint"><strong>POST</strong><span>/flows</span></p>
+                <p class="endpoint"><strong>GET</strong><span>/flows</span></p>
+                <p class="endpoint"><strong>GET</strong><span>/flows/:id</span></p>
+              </div>
+              <pre><code>{
+  "name": "Lead qualification",
+  "nodes": [],
+  "edges": []
+}</code></pre>
+            </section>
+
+            <section class="doc-section card" id="execution-endpoints">
+              <h2>Execution Endpoints</h2>
+              <div class="section-stack">
+                <p class="endpoint"><strong>POST</strong><span>/executions</span></p>
+                <p class="endpoint"><strong>GET</strong><span>/executions/:id</span></p>
+              </div>
+              <pre><code>{
+  "flowId": "flow_123",
+  "input": {
+    "email": "user@example.com"
+  }
+}</code></pre>
+            </section>
+
+            <section class="doc-section card" id="mail-endpoints">
+              <h2>Mail Endpoints</h2>
+              <p class="endpoint"><strong>POST</strong><span>/mail/send</span></p>
+              <pre><code>{
+  "to": "ops@example.com",
+  "subject": "Runtime alert",
+  "body": "Execution 123 failed on node transform-1."
+}</code></pre>
+            </section>
+
+            <section class="doc-section card" id="response-format">
+              <h2>Response Format</h2>
+              <pre><code>{
+  "ok": true,
+  "data": {}
+}</code></pre>
+              <div class="note">
+                <strong>Recommended next step</strong>
+                <p>Add a standardized error envelope as the auth layer, SDK, and UI error handling mature. That is one of the remaining platform gaps.</p>
+              </div>
+            </section>
+          </article>
+
+          <footer class="doc-footer">
+            <div data-page-nav></div>
+          </footer>
+        </main>
+
+        <aside class="docs-outline" data-outline></aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/docs-config.js"></script>
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/search.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
+name = "docs-iai-one"
+pages_build_output_dir = "./apps/docs/public"
+compatibility_date = "2026-03-17"
+send_metrics = false

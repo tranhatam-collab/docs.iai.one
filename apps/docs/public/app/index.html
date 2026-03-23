@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>App Surface • IAI Documentation</title>
+  <meta name="description" content="Operator workspace docs for app.iai.one: dashboards, review surfaces, workflow control, and human-facing operations." />
+  <meta name="theme-color" content="#050816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://docs.iai.one/app/" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="App Surface • IAI Documentation" />
+  <meta property="og:description" content="The human-facing operator workspace in the IAI ecosystem." />
+  <meta property="og:url" content="https://docs.iai.one/app/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
+  <link rel="stylesheet" href="/assets/docs.css" />
+</head>
+<body data-page="app">
+  <button class="sidebar-scrim" type="button" data-sidebar-close aria-label="Close sidebar"></button>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" data-sidebar></aside>
+    <div class="docs-workspace">
+      <header class="docs-topbar">
+        <div class="topbar-inner">
+          <nav class="topbar-links" aria-label="Product surfaces">
+            <a href="https://home.iai.one" target="_blank" rel="noreferrer">Home</a>
+            <a href="https://app.iai.one" target="_blank" rel="noreferrer">App</a>
+            <a href="https://flow.iai.one" target="_blank" rel="noreferrer">Flow</a>
+            <a href="https://mail.iai.one" target="_blank" rel="noreferrer">Mail</a>
+            <a href="https://api.iai.one" target="_blank" rel="noreferrer">API</a>
+          </nav>
+          <div class="topbar-actions">
+            <button class="topbar-action" type="button" data-search-open>Search</button>
+            <a class="topbar-action" href="https://app.iai.one" target="_blank" rel="noreferrer">Open App</a>
+            <button class="menu-button" type="button" data-sidebar-toggle>Menu</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="docs-layout">
+        <main class="doc-page">
+          <article class="doc-content">
+            <section class="doc-hero hero-card">
+              <span class="eyebrow">App Surface</span>
+              <h1 class="page-title">The Operator Workspace</h1>
+              <p class="page-intro"><a href="https://app.iai.one" target="_blank" rel="noreferrer"><strong>app.iai.one</strong></a> is the human-facing control layer in the ecosystem: dashboards, mission control, review flows, alerts, and operator actions.</p>
+            </section>
+
+            <section class="doc-section card" id="purpose">
+              <h2>Purpose</h2>
+              <div class="grid-3">
+                <article class="card">
+                  <h3>Dashboards</h3>
+                  <p>See operational state, execution summaries, and critical activity in one place.</p>
+                </article>
+                <article class="card">
+                  <h3>Human Review</h3>
+                  <p>Approve, reject, inspect, or rerun workflows when a fully automated path is not enough.</p>
+                </article>
+                <article class="card">
+                  <h3>Control Surface</h3>
+                  <p>Expose the product-facing controls that should not live inside the builder itself.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="boundaries">
+              <h2>Boundaries</h2>
+              <div class="grid-2">
+                <article class="card">
+                  <h3>What App Owns</h3>
+                  <ul class="checklist">
+                    <li>Dashboards and operator status views</li>
+                    <li>Human-in-the-loop review flows</li>
+                    <li>Role-based access and workspace controls</li>
+                    <li>Product-facing workflow operations</li>
+                  </ul>
+                </article>
+                <article class="card">
+                  <h3>What App Does Not Own</h3>
+                  <ul class="checklist">
+                    <li>Visual flow authoring logic</li>
+                    <li>Core runtime execution engine</li>
+                    <li>Mail delivery implementation</li>
+                    <li>Platform API contract design</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="relationships">
+              <h2>Relationships To Other Surfaces</h2>
+              <div class="grid-3">
+                <article class="card">
+                  <h3>With Flow</h3>
+                  <p>App consumes execution state and operational controls produced by <a href="https://flow.iai.one" target="_blank" rel="noreferrer"><strong>flow.iai.one</strong></a>.</p>
+                </article>
+                <article class="card">
+                  <h3>With Mail</h3>
+                  <p>App helps operators view or respond to alerts delivered by <a href="https://mail.iai.one" target="_blank" rel="noreferrer"><strong>mail.iai.one</strong></a>.</p>
+                </article>
+                <article class="card">
+                  <h3>With API</h3>
+                  <p>App uses <a href="https://api.iai.one" target="_blank" rel="noreferrer"><strong>api.iai.one</strong></a> for authenticated state changes and data retrieval.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="future">
+              <h2>Future Direction</h2>
+              <div class="note is-success">
+                <strong>Why this page exists now</strong>
+                <p>Even before the full app documentation is written, the ecosystem docs should already make it clear that <code>app.iai.one</code> is a first-class product surface and not a footnote under flow.</p>
+              </div>
+            </section>
+          </article>
+
+          <footer class="doc-footer">
+            <div data-page-nav></div>
+          </footer>
+        </main>
+
+        <aside class="docs-outline" data-outline></aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/docs-config.js"></script>
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/search.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

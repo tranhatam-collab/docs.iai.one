@@ -1,0 +1,14 @@
+{
+  "name": "docs-iai-one",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static documentation system for the IAI ecosystem.",
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "deploy": "wrangler pages deploy",
+    "check:links": "node scripts/check-links.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.8.0"
+  }
+}

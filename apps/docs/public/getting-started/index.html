@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Getting Started • IAI Documentation</title>
+  <meta name="description" content="Run your first IAI Flow in five minutes and understand the core concepts behind nodes, executions, and outputs." />
+  <meta name="theme-color" content="#050816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://docs.iai.one/getting-started/" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Getting Started • IAI Documentation" />
+  <meta property="og:description" content="Build and run your first IAI Flow in five minutes." />
+  <meta property="og:url" content="https://docs.iai.one/getting-started/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
+  <link rel="stylesheet" href="/assets/docs.css" />
+</head>
+<body data-page="getting-started">
+  <button class="sidebar-scrim" type="button" data-sidebar-close aria-label="Close sidebar"></button>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" data-sidebar></aside>
+    <div class="docs-workspace">
+      <header class="docs-topbar">
+        <div class="topbar-inner">
+          <nav class="topbar-links" aria-label="Product surfaces">
+            <a href="https://home.iai.one" target="_blank" rel="noreferrer">Home</a>
+            <a href="https://app.iai.one" target="_blank" rel="noreferrer">App</a>
+            <a href="https://flow.iai.one" target="_blank" rel="noreferrer">Flow</a>
+            <a href="https://mail.iai.one" target="_blank" rel="noreferrer">Mail</a>
+            <a href="https://api.iai.one" target="_blank" rel="noreferrer">API</a>
+          </nav>
+          <div class="topbar-actions">
+            <button class="topbar-action" type="button" data-search-open>Search</button>
+            <a class="topbar-action" href="https://flow.iai.one" target="_blank" rel="noreferrer">Open Flow</a>
+            <button class="menu-button" type="button" data-sidebar-toggle>Menu</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="docs-layout">
+        <main class="doc-page">
+          <article class="doc-content">
+            <section class="doc-hero hero-card">
+              <span class="eyebrow">Getting Started</span>
+              <h1 class="page-title">Start In 5 Minutes</h1>
+              <p class="page-intro">This is the shortest path from zero context to a working flow execution. It is designed for someone who wants to understand the system and ship fast.</p>
+              <div class="hero-actions">
+                <a class="button is-primary" href="https://flow.iai.one" target="_blank" rel="noreferrer">Go To Flow</a>
+                <a class="button" href="/flow/">Read Flow System</a>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="five-minute-start">
+              <h2>5 Minute Start</h2>
+              <div class="grid-2">
+                <article class="card">
+                  <h3>Step 1</h3>
+                  <p>Open <a href="https://flow.iai.one" target="_blank" rel="noreferrer"><strong>https://flow.iai.one</strong></a>.</p>
+                </article>
+                <article class="card">
+                  <h3>Step 2</h3>
+                  <p>Create a new flow from the builder start screen.</p>
+                </article>
+                <article class="card">
+                  <h3>Step 3</h3>
+                  <p>Add three basic nodes: <strong>Input</strong>, <strong>Logic</strong>, and <strong>Output</strong>.</p>
+                </article>
+                <article class="card">
+                  <h3>Step 4</h3>
+                  <p>Run the flow and inspect the execution output or mail side-effects.</p>
+                </article>
+              </div>
+              <div class="note is-warning">
+                <strong>Current login state</strong>
+                <p>The current access path is a temporary developer mailbox login. The full identity layer is planned as a dedicated future system.</p>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="accounts">
+              <h2>Accounts</h2>
+              <div class="grid-2">
+                <article class="card">
+                  <h3>Current</h3>
+                  <ul class="checklist">
+                    <li>Session-based access</li>
+                    <li>Temporary developer mailbox login</li>
+                    <li>Builder and runtime testing for MVP use</li>
+                  </ul>
+                </article>
+                <article class="card">
+                  <h3>Future</h3>
+                  <ul class="checklist">
+                    <li>Identity layer</li>
+                    <li>Role-aware access in <a href="https://app.iai.one" target="_blank" rel="noreferrer"><strong>app.iai.one</strong></a></li>
+                    <li>Token-based API access</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="core-concepts">
+              <h2>Core Concepts</h2>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Term</th>
+                      <th>Meaning</th>
+                      <th>Why it matters</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>Flow</code></td>
+                      <td>A workflow composed of nodes and edges.</td>
+                      <td>It is the unit a user builds, saves, and executes.</td>
+                    </tr>
+                    <tr>
+                      <td><code>Node</code></td>
+                      <td>An action in the workflow.</td>
+                      <td>Each node maps to runtime behavior.</td>
+                    </tr>
+                    <tr>
+                      <td><code>Execution</code></td>
+                      <td>A single run of a flow.</td>
+                      <td>Executions create logs, outputs, and retry state.</td>
+                    </tr>
+                    <tr>
+                      <td><code>Output</code></td>
+                      <td>The result produced by the final step or side-effect.</td>
+                      <td>Outputs can feed mail, alerts, or downstream systems.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="first-example">
+              <h2>First Example</h2>
+              <p>Even the smallest successful flow follows the same structural rules used by larger workflow graphs.</p>
+              <pre><code>{
+  "nodes": [
+    { "id": "input-1", "type": "input" },
+    { "id": "logic-1", "type": "transform" },
+    { "id": "output-1", "type": "output" }
+  ],
+  "edges": [
+    { "from": "input-1", "to": "logic-1" },
+    { "from": "logic-1", "to": "output-1" }
+  ]
+}</code></pre>
+              <div class="note is-success">
+                <strong>What to verify</strong>
+                <p>Your first success criteria should be simple: validate JSON, run once, store output, and confirm the execution log is visible.</p>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="next-steps">
+              <h2>Next Steps</h2>
+              <div class="grid-3">
+                <a class="quick-link" href="/architecture/">
+                  <h3>Architecture</h3>
+                  <p>Understand the platform layers before deeper implementation work.</p>
+                </a>
+                <a class="quick-link" href="/deployment/">
+                  <h3>Deployment</h3>
+                  <p>Install Wrangler, create D1, run local, and deploy to Cloudflare.</p>
+                </a>
+                <a class="quick-link" href="/api/">
+                  <h3>API Reference</h3>
+                  <p>Move from UI testing to programmatic integration.</p>
+                </a>
+              </div>
+            </section>
+          </article>
+
+          <footer class="doc-footer">
+            <div data-page-nav></div>
+          </footer>
+        </main>
+
+        <aside class="docs-outline" data-outline></aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/docs-config.js"></script>
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/search.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

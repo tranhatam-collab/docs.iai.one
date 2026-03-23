@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>FAQ • IAI Documentation</title>
+  <meta name="description" content="Common questions about creating flows, pricing status, and the security model for IAI." />
+  <meta name="theme-color" content="#050816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://docs.iai.one/faq/" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="FAQ • IAI Documentation" />
+  <meta property="og:description" content="Answers to common questions about flows, free access, and security." />
+  <meta property="og:url" content="https://docs.iai.one/faq/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
+  <link rel="stylesheet" href="/assets/docs.css" />
+</head>
+<body data-page="faq">
+  <button class="sidebar-scrim" type="button" data-sidebar-close aria-label="Close sidebar"></button>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" data-sidebar></aside>
+    <div class="docs-workspace">
+      <header class="docs-topbar">
+        <div class="topbar-inner">
+          <nav class="topbar-links" aria-label="Product surfaces">
+            <a href="https://home.iai.one" target="_blank" rel="noreferrer">Home</a>
+            <a href="https://app.iai.one" target="_blank" rel="noreferrer">App</a>
+            <a href="https://flow.iai.one" target="_blank" rel="noreferrer">Flow</a>
+            <a href="https://mail.iai.one" target="_blank" rel="noreferrer">Mail</a>
+            <a href="https://api.iai.one" target="_blank" rel="noreferrer">API</a>
+          </nav>
+          <div class="topbar-actions">
+            <button class="topbar-action" type="button" data-search-open>Search</button>
+            <a class="topbar-action" href="/getting-started/">Get Started</a>
+            <button class="menu-button" type="button" data-sidebar-toggle>Menu</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="docs-layout">
+        <main class="doc-page">
+          <article class="doc-content">
+            <section class="doc-hero hero-card">
+              <span class="eyebrow">FAQ</span>
+              <h1 class="page-title">Common Questions</h1>
+              <p class="page-intro">Short answers for the most common platform questions right now.</p>
+            </section>
+
+            <section class="doc-section card" id="faq-items">
+              <h2>Answers</h2>
+              <div class="faq-list">
+                <details class="faq-item" open>
+                  <summary>How do I create a flow?</summary>
+                  <p>Open <a href="https://flow.iai.one" target="_blank" rel="noreferrer"><strong>flow.iai.one</strong></a>, create a flow, add input, logic, and output nodes, then run the execution.</p>
+                </details>
+                <details class="faq-item">
+                  <summary>Is it free?</summary>
+                  <p>The current documentation describes an MVP-stage platform. Pricing and packaging are not finalized in this docs set yet.</p>
+                </details>
+                <details class="faq-item">
+                  <summary>How is security handled?</summary>
+                  <p>The current default is strict CSP, no tracking, no analytics, no external scripts, and Cloudflare-native deployment.</p>
+                </details>
+                <details class="faq-item">
+                  <summary>Where does app.iai.one fit?</summary>
+                  <p><a href="https://app.iai.one" target="_blank" rel="noreferrer"><strong>app.iai.one</strong></a> is the operator-facing surface for review, dashboards, and intervention. It is not the workflow builder itself.</p>
+                </details>
+                <details class="faq-item">
+                  <summary>What is missing today?</summary>
+                  <p>The platform still needs a more standardized API layer, auth layer, UI error handling, and a formal SDK release.</p>
+                </details>
+              </div>
+            </section>
+          </article>
+
+          <footer class="doc-footer">
+            <div data-page-nav></div>
+          </footer>
+        </main>
+
+        <aside class="docs-outline" data-outline></aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/docs-config.js"></script>
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/search.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

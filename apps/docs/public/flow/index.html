@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Flow System • IAI Documentation</title>
+  <meta name="description" content="Structure, node types, execution lifecycle, and UI builder behavior for IAI Flow." />
+  <meta name="theme-color" content="#050816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://docs.iai.one/flow/" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Flow System • IAI Documentation" />
+  <meta property="og:description" content="Nodes, edges, executions, builder UX, and runtime output for IAI Flow." />
+  <meta property="og:url" content="https://docs.iai.one/flow/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
+  <link rel="stylesheet" href="/assets/docs.css" />
+</head>
+<body data-page="flow">
+  <button class="sidebar-scrim" type="button" data-sidebar-close aria-label="Close sidebar"></button>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" data-sidebar></aside>
+    <div class="docs-workspace">
+      <header class="docs-topbar">
+        <div class="topbar-inner">
+          <nav class="topbar-links" aria-label="Product surfaces">
+            <a href="https://home.iai.one" target="_blank" rel="noreferrer">Home</a>
+            <a href="https://app.iai.one" target="_blank" rel="noreferrer">App</a>
+            <a href="https://flow.iai.one" target="_blank" rel="noreferrer">Flow</a>
+            <a href="https://mail.iai.one" target="_blank" rel="noreferrer">Mail</a>
+            <a href="https://api.iai.one" target="_blank" rel="noreferrer">API</a>
+          </nav>
+          <div class="topbar-actions">
+            <button class="topbar-action" type="button" data-search-open>Search</button>
+            <a class="topbar-action" href="https://flow.iai.one" target="_blank" rel="noreferrer">Launch Builder</a>
+            <button class="menu-button" type="button" data-sidebar-toggle>Menu</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="docs-layout">
+        <main class="doc-page">
+          <article class="doc-content">
+            <section class="doc-hero hero-card">
+              <span class="eyebrow">Flow System</span>
+              <h1 class="page-title">Workflows As Ordered Node Graphs</h1>
+              <p class="page-intro">A flow is the core execution unit in IAI. It is a set of nodes connected in a directed graph that the runtime can validate, execute, retry, and observe.</p>
+            </section>
+
+            <section class="doc-section card" id="what-is-flow">
+              <h2>What Is A Flow</h2>
+              <p>A flow is a workflow composed of ordered actions. The platform stores a graph definition, validates it, then turns it into execution steps.</p>
+              <div class="note">
+                <strong>Practical rule</strong>
+                <p>If it cannot be serialized as nodes and edges, it is not yet a first-class flow artifact.</p>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="flow-structure">
+              <h2>Flow Structure</h2>
+              <pre><code>{
+  "nodes": [],
+  "edges": []
+}</code></pre>
+              <p>The shape stays intentionally small. Complexity belongs inside node configuration, not in ad hoc flow-level nesting.</p>
+            </section>
+
+            <section class="doc-section card" id="node-types">
+              <h2>Node Types</h2>
+              <div class="grid-3">
+                <article class="card">
+                  <h3><code>input</code></h3>
+                  <p>Introduces data or user-provided values into the workflow.</p>
+                </article>
+                <article class="card">
+                  <h3><code>condition</code></h3>
+                  <p>Evaluates a branch and chooses execution direction.</p>
+                </article>
+                <article class="card">
+                  <h3><code>transform</code></h3>
+                  <p>Changes data shape or computes a derived payload.</p>
+                </article>
+                <article class="card">
+                  <h3><code>output</code></h3>
+                  <p>Produces the terminal result of a flow.</p>
+                </article>
+                <article class="card">
+                  <h3><code>http</code></h3>
+                  <p>Calls external HTTP services or internal APIs.</p>
+                </article>
+                <article class="card">
+                  <h3><code>ai</code> (future)</h3>
+                  <p>Reserved for model prompts, inference actions, or agentic steps.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="execution">
+              <h2>Execution</h2>
+              <div class="grid-3">
+                <article class="card">
+                  <h3>Create Execution</h3>
+                  <p>The API or UI creates a run record linked to a flow definition.</p>
+                </article>
+                <article class="card">
+                  <h3>Run</h3>
+                  <p>The runtime maps graph state into ordered node execution and stores logs.</p>
+                </article>
+                <article class="card">
+                  <h3>Store Result</h3>
+                  <p>The final output and side-effects become part of execution history.</p>
+                </article>
+              </div>
+              <pre><code>{
+  "flowId": "flow_123",
+  "status": "completed",
+  "steps": [
+    { "nodeId": "input-1", "status": "ok" },
+    { "nodeId": "transform-1", "status": "ok" },
+    { "nodeId": "output-1", "status": "ok" }
+  ],
+  "result": {
+    "message": "Flow completed"
+  }
+}</code></pre>
+            </section>
+
+            <section class="doc-section card" id="builder-ui">
+              <h2>UI Flow Builder</h2>
+              <p><a href="https://flow.iai.one" target="_blank" rel="noreferrer"><strong>flow.iai.one</strong></a> is the current builder surface.</p>
+              <div class="grid-3">
+                <article class="card">
+                  <h3>Drag &amp; Drop</h3>
+                  <p>Compose nodes quickly without writing flow JSON by hand.</p>
+                </article>
+                <article class="card">
+                  <h3>Preview</h3>
+                  <p>Inspect node configuration and flow structure before execution.</p>
+                </article>
+                <article class="card">
+                  <h3>Run</h3>
+                  <p>Execute a draft and inspect runtime output with low friction.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="mail-integration">
+              <h2>Flow To Mail Integration</h2>
+              <p>One of the first practical use cases is sending flow outputs into the communication layer.</p>
+              <pre><code>{
+  "action": "mail.send",
+  "to": "operator@example.com",
+  "subject": "Flow completed",
+  "body": "Execution output is ready."
+}</code></pre>
+              <div class="note is-success">
+                <strong>System pattern</strong>
+                <p>Flows compute. Mail delivers. App surfaces review. Keeping those responsibilities separate prevents product boundaries from collapsing into one giant surface.</p>
+              </div>
+            </section>
+          </article>
+
+          <footer class="doc-footer">
+            <div data-page-nav></div>
+          </footer>
+        </main>
+
+        <aside class="docs-outline" data-outline></aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/docs-config.js"></script>
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/search.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
