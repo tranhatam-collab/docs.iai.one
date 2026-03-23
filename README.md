@@ -75,6 +75,8 @@ For Cloudflare Pages, configure the project to publish:
 - output directory: `apps/docs/public`
 - project name: `docs-iai-one`
 
+The deploy script pins the Cloudflare account with `CLOUDFLARE_ACCOUNT_ID` so Pages deploys go to the correct `docs-iai-one` project even when multiple Cloudflare accounts are available in the same Wrangler login.
+
 ## Related Surfaces To Keep In Sync
 
 - [home.iai.one](https://home.iai.one)

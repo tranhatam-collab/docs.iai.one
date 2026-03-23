@@ -5,7 +5,7 @@
   "description": "Static documentation system for the IAI ecosystem.",
   "scripts": {
     "dev": "wrangler pages dev",
-    "deploy": "wrangler pages deploy",
+    "deploy": "CLOUDFLARE_ACCOUNT_ID=f3f9e76222dcb488d5e303e29e8ba192 wrangler pages deploy",
     "check:links": "node scripts/check-links.mjs"
   },
   "devDependencies": {
