@@ -1,0 +1,73 @@
+<svg width="1440" height="920" viewBox="0 0 1440 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="920" rx="36" fill="#07101E"/>
+  <rect x="28" y="28" width="1384" height="864" rx="30" fill="#0B1527" stroke="#1F324C"/>
+  <rect x="28" y="28" width="1384" height="92" rx="30" fill="#0F1C31"/>
+  <text x="74" y="83" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="34" font-weight="700">app.iai.one annotated walkthrough</text>
+  <text x="74" y="114" fill="#8EA6C8" font-family="Arial, sans-serif" font-size="18">Operator dashboard, review queue, alert stream, and detail panel</text>
+
+  <rect x="56" y="148" width="234" height="716" rx="24" fill="#0E1A2D" stroke="#243A59"/>
+  <text x="88" y="198" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">Workspace</text>
+  <rect x="84" y="232" width="178" height="56" rx="14" fill="#173456" stroke="#60C5FF"/>
+  <text x="110" y="268" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Mission Control</text>
+  <rect x="84" y="304" width="178" height="56" rx="14" fill="#162842" stroke="#2D4D74"/>
+  <text x="110" y="340" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Review Queue</text>
+  <rect x="84" y="376" width="178" height="56" rx="14" fill="#162842" stroke="#2D4D74"/>
+  <text x="110" y="412" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Alerts</text>
+  <rect x="84" y="448" width="178" height="56" rx="14" fill="#162842" stroke="#2D4D74"/>
+  <text x="110" y="484" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Runs</text>
+
+  <rect x="320" y="148" width="724" height="716" rx="24" fill="#091220" stroke="#243A59"/>
+  <text x="352" y="198" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">Operator dashboard</text>
+  <rect x="352" y="232" width="202" height="118" rx="22" fill="#153154" stroke="#60C5FF"/>
+  <text x="382" y="278" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Active flows</text>
+  <text x="382" y="320" fill="#89F0BF" font-family="Arial, sans-serif" font-size="34" font-weight="700">24</text>
+  <rect x="576" y="232" width="202" height="118" rx="22" fill="#153154" stroke="#60C5FF"/>
+  <text x="606" y="278" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Needs review</text>
+  <text x="606" y="320" fill="#F8D36D" font-family="Arial, sans-serif" font-size="34" font-weight="700">6</text>
+  <rect x="800" y="232" width="202" height="118" rx="22" fill="#153154" stroke="#60C5FF"/>
+  <text x="830" y="278" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Alerts</text>
+  <text x="830" y="320" fill="#FF8E88" font-family="Arial, sans-serif" font-size="34" font-weight="700">2 critical</text>
+
+  <rect x="352" y="384" width="650" height="206" rx="22" fill="#111E34" stroke="#2D4D74"/>
+  <text x="384" y="428" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Review queue</text>
+  <text x="384" y="470" fill="#8EA6C8" font-family="Arial, sans-serif" font-size="20">1. Verify execution output before release</text>
+  <text x="384" y="506" fill="#8EA6C8" font-family="Arial, sans-serif" font-size="20">2. Re-run transform step on failed lead import</text>
+  <text x="384" y="542" fill="#8EA6C8" font-family="Arial, sans-serif" font-size="20">3. Approve alert escalation mail</text>
+
+  <rect x="352" y="620" width="650" height="184" rx="22" fill="#111E34" stroke="#2D4D74"/>
+  <text x="384" y="664" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Alert stream</text>
+  <text x="384" y="706" fill="#FFB7AF" font-family="Arial, sans-serif" font-size="20">Mail delivery queue exceeded threshold</text>
+  <text x="384" y="742" fill="#8EA6C8" font-family="Arial, sans-serif" font-size="20">Execution flow_123 completed and awaits operator review</text>
+
+  <rect x="1074" y="148" width="310" height="716" rx="24" fill="#0E1A2D" stroke="#243A59"/>
+  <text x="1106" y="198" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">Detail panel</text>
+  <rect x="1106" y="234" width="246" height="230" rx="22" fill="#162842" stroke="#2D4D74"/>
+  <text x="1136" y="278" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Execution detail</text>
+  <text x="1136" y="316" fill="#8EA6C8" font-family="Arial, sans-serif" font-size="20">flow: lead-qualify</text>
+  <text x="1136" y="352" fill="#8DF2BB" font-family="Arial, sans-serif" font-size="20">status: ready for approval</text>
+  <text x="1136" y="388" fill="#8EA6C8" font-family="Arial, sans-serif" font-size="20">next action: notify ops</text>
+  <rect x="1106" y="500" width="246" height="76" rx="18" fill="#7DE7A3"/>
+  <text x="1188" y="546" fill="#0A2214" font-family="Arial, sans-serif" font-size="24" font-weight="700">Approve</text>
+  <rect x="1106" y="596" width="246" height="76" rx="18" fill="#233752" stroke="#3A5578"/>
+  <text x="1202" y="642" fill="#F5F8FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Rerun</text>
+
+  <circle cx="276" cy="258" r="28" fill="#F8D36D"/>
+  <text x="267" y="268" fill="#332100" font-family="Arial, sans-serif" font-size="22" font-weight="700">1</text>
+  <path d="M304 258H332" stroke="#F8D36D" stroke-width="6" stroke-linecap="round"/>
+  <text x="342" y="265" fill="#F8D36D" font-family="Arial, sans-serif" font-size="22" font-weight="700">Choose the workspace mode.</text>
+
+  <circle cx="574" cy="216" r="28" fill="#F8D36D"/>
+  <text x="565" y="226" fill="#332100" font-family="Arial, sans-serif" font-size="22" font-weight="700">2</text>
+  <path d="M574 244V232" stroke="#F8D36D" stroke-width="6" stroke-linecap="round"/>
+  <text x="502" y="178" fill="#F8D36D" font-family="Arial, sans-serif" font-size="22" font-weight="700">Scan top-level operational signals.</text>
+
+  <circle cx="1008" cy="486" r="28" fill="#F8D36D"/>
+  <text x="999" y="496" fill="#332100" font-family="Arial, sans-serif" font-size="22" font-weight="700">3</text>
+  <path d="M1036 486H1074" stroke="#F8D36D" stroke-width="6" stroke-linecap="round"/>
+  <text x="796" y="454" fill="#F8D36D" font-family="Arial, sans-serif" font-size="22" font-weight="700">Open the queue item that needs a human decision.</text>
+
+  <circle cx="1076" cy="538" r="28" fill="#F8D36D"/>
+  <text x="1067" y="548" fill="#332100" font-family="Arial, sans-serif" font-size="22" font-weight="700">4</text>
+  <path d="M1104 538H1106" stroke="#F8D36D" stroke-width="6" stroke-linecap="round"/>
+  <text x="1060" y="114" fill="#F8D36D" font-family="Arial, sans-serif" font-size="22" font-weight="700">Approve, rerun, or escalate from the detail panel.</text>
+</svg>

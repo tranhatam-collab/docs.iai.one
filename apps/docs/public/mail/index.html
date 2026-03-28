@@ -50,6 +50,10 @@
 
             <section class="doc-section card" id="mail-overview">
               <h2>mail.iai.one</h2>
+              <div class="note is-warning">
+                <strong>Observed live state on March 28, 2026</strong>
+                <p><a href="https://mail.iai.one" target="_blank" rel="noreferrer"><strong>mail.iai.one</strong></a> currently returns <code>200 HTML</code> as a Mailcow login surface fronted by nginx on a VPS. It is not a Cloudflare Pages app.</p>
+              </div>
               <div class="grid-3">
                 <article class="card">
                   <h3>Transactional Email</h3>
@@ -62,6 +66,28 @@
                 <article class="card">
                   <h3>System Alert</h3>
                   <p>Operational messages for failures, exceptions, and runtime incidents.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="surface-boundary">
+              <h2>Surface Boundary</h2>
+              <div class="grid-2">
+                <article class="card">
+                  <h3>What The Live Surface Is</h3>
+                  <ul class="checklist">
+                    <li>Mail operations UI and mailbox entry.</li>
+                    <li>Delivery infrastructure running outside Pages.</li>
+                    <li>Admin and operational surface for email handling.</li>
+                  </ul>
+                </article>
+                <article class="card">
+                  <h3>What Docs Must Still Clarify</h3>
+                  <ul class="checklist">
+                    <li>Which API or gateway path owns programmatic send operations.</li>
+                    <li>How alerts and transactional mail split between platform and server configs.</li>
+                    <li>Which routes are for users, operators, and server admins.</li>
+                  </ul>
                 </article>
               </div>
             </section>
@@ -120,6 +146,10 @@
               <div class="note">
                 <strong>Boundary with app.iai.one</strong>
                 <p>Mail delivers messages. <a href="https://app.iai.one" target="_blank" rel="noreferrer"><strong>app.iai.one</strong></a> is the surface where operators review those messages, manage incidents, or trigger follow-up actions.</p>
+              </div>
+              <div class="note is-success">
+                <strong>What the mail team should publish next</strong>
+                <p>Document send APIs, mailbox/admin boundaries, operational escalation paths, and which messages are system alerts versus user-facing notifications.</p>
               </div>
             </section>
           </article>

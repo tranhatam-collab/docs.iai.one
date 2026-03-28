@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>cdn.iai.one • IAI Documentation</title>
+  <meta name="description" content="Documentation for the planned cdn.iai.one surface: intended purpose, launch boundary, and what must be documented before DNS goes live." />
+  <meta name="theme-color" content="#050816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://docs.iai.one/cdn/" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="cdn.iai.one • IAI Documentation" />
+  <meta property="og:description" content="Planned CDN surface, launch checklist, and docs requirements for asset delivery and cache policy." />
+  <meta property="og:url" content="https://docs.iai.one/cdn/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
+  <link rel="stylesheet" href="/assets/docs.css" />
+</head>
+<body data-page="cdn">
+  <button class="sidebar-scrim" type="button" data-sidebar-close aria-label="Close sidebar"></button>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" data-sidebar></aside>
+    <div class="docs-workspace">
+      <header class="docs-topbar">
+        <div class="topbar-inner">
+          <nav class="topbar-links" aria-label="Product surfaces">
+            <a href="https://docs.iai.one" target="_blank" rel="noreferrer">Docs</a>
+            <a href="https://api.iai.one" target="_blank" rel="noreferrer">API</a>
+            <a href="https://flow.iai.one" target="_blank" rel="noreferrer">Flow</a>
+            <a href="https://home.iai.one" target="_blank" rel="noreferrer">Home</a>
+            <a href="https://iai.one" target="_blank" rel="noreferrer">iai.one</a>
+          </nav>
+          <div class="topbar-actions">
+            <button class="topbar-action" type="button" data-search-open>Search</button>
+            <a class="topbar-action" href="/service-registry/">Registry</a>
+            <button class="menu-button" type="button" data-sidebar-toggle>Menu</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="docs-layout">
+        <main class="doc-page">
+          <article class="doc-content">
+            <section class="doc-hero hero-card">
+              <span class="eyebrow">Planned Infra Surface</span>
+              <h1 class="page-title">cdn.iai.one</h1>
+              <p class="page-intro"><code>cdn.iai.one</code> is intended to be the Cloudflare CDN surface for the ecosystem. As of <strong>March 28, 2026</strong>, the public host is <strong>not resolving in DNS</strong>, so this page documents launch intent and pre-publication requirements rather than a live endpoint.</p>
+            </section>
+
+            <section class="doc-section card" id="expected-purpose">
+              <h2>Expected Purpose</h2>
+              <div class="grid-3">
+                <article class="card">
+                  <h3>Static Assets</h3>
+                  <p>Serve versioned assets that should be cacheable and predictable across docs, app, and supporting surfaces.</p>
+                </article>
+                <article class="card">
+                  <h3>Public Bundles</h3>
+                  <p>Hold downloadable artifacts, media, or SDK bundles that should not live directly inside product repos.</p>
+                </article>
+                <article class="card">
+                  <h3>Cache Policy</h3>
+                  <p>Make TTL, invalidation, and asset-versioning policy explicit instead of hiding it behind ad hoc links.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="do-not-publish-yet">
+              <h2>Do Not Treat As Live Yet</h2>
+              <div class="note is-warning">
+                <strong>Current state</strong>
+                <p>Because the hostname does not resolve publicly, product pages should not expose <code>cdn.iai.one</code> as a real user-facing link yet. Docs should describe it as planned infrastructure only.</p>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="launch-checklist">
+              <h2>Launch Checklist</h2>
+              <ul class="checklist">
+                <li>DNS live and verified publicly.</li>
+                <li>Owner team named for cache policy and purge workflow.</li>
+                <li>Documented path taxonomy for assets, bundles, and media.</li>
+                <li>Versioning rules so clients know when URLs are immutable versus replaceable.</li>
+                <li>Security and privacy review for any public files or signed access patterns.</li>
+              </ul>
+            </section>
+          </article>
+
+          <footer class="doc-footer">
+            <div data-page-nav></div>
+          </footer>
+        </main>
+
+        <aside class="docs-outline" data-outline></aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/docs-config.js"></script>
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/search.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

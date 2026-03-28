@@ -145,6 +145,34 @@
               </div>
             </section>
 
+            <section class="doc-section card" id="annotated-walkthrough">
+              <h2>Annotated Walkthrough</h2>
+              <div class="walkthrough-shell">
+                <figure class="walkthrough-frame">
+                  <img src="/assets/walkthrough-flow.svg" alt="Annotated walkthrough for flow.iai.one showing node palette, canvas graph, run control, and execution output." />
+                  <figcaption>Guide frame for the current Flow model: palette on the left, node graph in the middle, and execution feedback on the right.</figcaption>
+                </figure>
+                <div class="walkthrough-steps">
+                  <article class="walkthrough-step">
+                    <strong>Step 1</strong>
+                    <p>Start from the node palette and add the smallest possible graph: one input, one logic or transform node, and one output.</p>
+                  </article>
+                  <article class="walkthrough-step">
+                    <strong>Step 2</strong>
+                    <p>Connect nodes left to right so execution order is obvious before you worry about advanced branching.</p>
+                  </article>
+                  <article class="walkthrough-step">
+                    <strong>Step 3</strong>
+                    <p>Run once and inspect execution state immediately. A first success means validation passed, steps executed, and result was stored.</p>
+                  </article>
+                  <article class="walkthrough-step">
+                    <strong>Step 4</strong>
+                    <p>If a side-effect matters, chain the result into mail or a downstream system only after the base graph works reliably.</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+
             <section class="doc-section card" id="mail-integration">
               <h2>Flow To Mail Integration</h2>
               <p>One of the first practical use cases is sending flow outputs into the communication layer.</p>

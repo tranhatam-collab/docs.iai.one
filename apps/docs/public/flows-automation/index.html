@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>flows.iai.one • IAI Documentation</title>
+  <meta name="description" content="Documentation for the planned flows.iai.one automation surface: n8n role, naming boundary versus flow.iai.one, and readiness checklist before go-live." />
+  <meta name="theme-color" content="#050816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://docs.iai.one/flows-automation/" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="flows.iai.one • IAI Documentation" />
+  <meta property="og:description" content="Planned n8n automation surface and the documentation needed before public launch." />
+  <meta property="og:url" content="https://docs.iai.one/flows-automation/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
+  <link rel="stylesheet" href="/assets/docs.css" />
+</head>
+<body data-page="flows-automation">
+  <button class="sidebar-scrim" type="button" data-sidebar-close aria-label="Close sidebar"></button>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" data-sidebar></aside>
+    <div class="docs-workspace">
+      <header class="docs-topbar">
+        <div class="topbar-inner">
+          <nav class="topbar-links" aria-label="Product surfaces">
+            <a href="https://flow.iai.one" target="_blank" rel="noreferrer">Flow</a>
+            <a href="https://api.flow.iai.one" target="_blank" rel="noreferrer">Flow API</a>
+            <a href="https://docs.iai.one" target="_blank" rel="noreferrer">Docs</a>
+            <a href="https://home.iai.one" target="_blank" rel="noreferrer">Home</a>
+            <a href="https://api.iai.one" target="_blank" rel="noreferrer">API</a>
+          </nav>
+          <div class="topbar-actions">
+            <button class="topbar-action" type="button" data-search-open>Search</button>
+            <a class="topbar-action" href="/service-registry/">Registry</a>
+            <button class="menu-button" type="button" data-sidebar-toggle>Menu</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="docs-layout">
+        <main class="doc-page">
+          <article class="doc-content">
+            <section class="doc-hero hero-card">
+              <span class="eyebrow">Planned Automation Surface</span>
+              <h1 class="page-title">flows.iai.one</h1>
+              <p class="page-intro"><code>flows.iai.one</code> is intended to be the n8n-backed automation surface. As of <strong>March 28, 2026</strong>, the hostname is <strong>not resolving publicly</strong>, so this page documents readiness requirements and naming boundaries rather than a live system.</p>
+            </section>
+
+            <section class="doc-section card" id="intended-role">
+              <h2>Intended Role</h2>
+              <div class="grid-3">
+                <article class="card">
+                  <h3>Automation Ops</h3>
+                  <p>Hold n8n-style automation flows, connectors, and external orchestration that do not belong inside the Flow builder UI.</p>
+                </article>
+                <article class="card">
+                  <h3>Webhook Fabric</h3>
+                  <p>Receive or trigger automation events across third-party systems where low-code routing matters.</p>
+                </article>
+                <article class="card">
+                  <h3>Operational Boundary</h3>
+                  <p>Stay distinct from <code>flow.iai.one</code>, which should remain the first-class workflow product surface.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="naming-boundary">
+              <h2>Naming Boundary: Flow vs Flows</h2>
+              <div class="note">
+                <strong>Keep the distinction explicit</strong>
+                <p><code>flow.iai.one</code> is the workflow builder and runtime product. <code>flows.iai.one</code> should only exist if it clearly represents an automation or orchestration environment such as n8n. Otherwise the names will confuse users and developers.</p>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="go-live-checklist">
+              <h2>Go-Live Checklist</h2>
+              <ul class="checklist">
+                <li>DNS live and public auth flow defined.</li>
+                <li>Ownership boundary documented against <code>flow.iai.one</code> and <code>api.flow.iai.one</code>.</li>
+                <li>Webhook ingress and egress rules documented.</li>
+                <li>Secrets, credentials, and admin access model documented.</li>
+                <li>Error-handling and incident path documented for failed automations.</li>
+              </ul>
+            </section>
+          </article>
+
+          <footer class="doc-footer">
+            <div data-page-nav></div>
+          </footer>
+        </main>
+
+        <aside class="docs-outline" data-outline></aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/docs-config.js"></script>
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/search.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

@@ -54,6 +54,38 @@ window.IAIDocs = {
       ]
     },
     {
+      id: "iai-one",
+      title: "iai.one",
+      shortTitle: "iai.one",
+      path: "/iai-one/",
+      category: "Overview",
+      description: "The Wix-hosted charter root and constitutional narrative surface for the IAI ecosystem.",
+      keywords: [
+        "iai.one",
+        "charter",
+        "constitution",
+        "wix",
+        "root domain",
+        "public narrative"
+      ]
+    },
+    {
+      id: "home-surface",
+      title: "home.iai.one",
+      shortTitle: "home.iai.one",
+      path: "/home-surface/",
+      category: "Overview",
+      description: "The Cloudflare Pages portal that routes users from public narrative into product, docs, and developer surfaces.",
+      keywords: [
+        "home.iai.one",
+        "portal",
+        "entry surface",
+        "gateway",
+        "cloudflare pages",
+        "system entry"
+      ]
+    },
+    {
       id: "flow",
       title: "Flow System",
       shortTitle: "Flow",
@@ -132,6 +164,22 @@ window.IAIDocs = {
         "notification",
         "alert",
         "api"
+      ]
+    },
+    {
+      id: "flows-automation",
+      title: "flows.iai.one",
+      shortTitle: "flows.iai.one",
+      path: "/flows-automation/",
+      category: "Systems",
+      description: "The planned n8n-backed automation surface and the documentation requirements before it should be treated as publicly live.",
+      keywords: [
+        "flows.iai.one",
+        "n8n",
+        "automation",
+        "dns unresolved",
+        "webhooks",
+        "ops flows"
       ]
     },
     {
@@ -216,6 +264,22 @@ window.IAIDocs = {
       ]
     },
     {
+      id: "cdn",
+      title: "cdn.iai.one",
+      shortTitle: "cdn.iai.one",
+      path: "/cdn/",
+      category: "Platform",
+      description: "The planned Cloudflare CDN surface and the launch checklist needed before publishing it as a live public endpoint.",
+      keywords: [
+        "cdn.iai.one",
+        "cdn",
+        "cache",
+        "asset delivery",
+        "dns unresolved",
+        "cloudflare cdn"
+      ]
+    },
+    {
       id: "sdk",
       title: "SDK",
       shortTitle: "SDK",
@@ -284,6 +348,22 @@ window.IAIDocs = {
       ]
     },
     {
+      id: "owner-checklist",
+      title: "Owner Checklist",
+      shortTitle: "Owner Checklist",
+      path: "/owner-checklist/",
+      category: "Overview",
+      description: "Cross-team help and docs checklist for each iai.one surface so product owners know what must stay documented.",
+      keywords: [
+        "owner checklist",
+        "docs checklist",
+        "help checklist",
+        "surface owners",
+        "developer checklist",
+        "release checklist"
+      ]
+    },
+    {
       id: "faq",
       title: "FAQ",
       shortTitle: "FAQ",
@@ -317,15 +397,15 @@ window.IAIDocs = {
   nav: [
     {
       title: "Overview",
-      pageIds: ["home", "getting-started", "architecture", "ecosystem", "service-registry"]
+      pageIds: ["home", "getting-started", "architecture", "iai-one", "home-surface", "ecosystem", "service-registry", "owner-checklist"]
     },
     {
       title: "Systems",
-      pageIds: ["app", "dash", "developer", "flow", "mail", "api", "sdk", "use-cases"]
+      pageIds: ["app", "dash", "developer", "flow", "mail", "flows-automation", "api", "sdk", "use-cases"]
     },
     {
       title: "Platform",
-      pageIds: ["security", "deployment", "noos", "cios", "faq", "changelog"]
+      pageIds: ["security", "deployment", "cdn", "noos", "cios", "faq", "changelog"]
     }
   ],
   ecosystemLinks: [

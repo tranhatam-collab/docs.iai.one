@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Owner Checklist • IAI Documentation</title>
+  <meta name="description" content="Cross-team checklist for help and documentation ownership across iai.one surfaces, including release-time requirements and minimum documentation obligations." />
+  <meta name="theme-color" content="#050816" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://docs.iai.one/owner-checklist/" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Owner Checklist • IAI Documentation" />
+  <meta property="og:description" content="What each team must keep documented, linked, and current across the iai.one ecosystem." />
+  <meta property="og:url" content="https://docs.iai.one/owner-checklist/" />
+  <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
+  <link rel="stylesheet" href="/assets/docs.css" />
+</head>
+<body data-page="owner-checklist">
+  <button class="sidebar-scrim" type="button" data-sidebar-close aria-label="Close sidebar"></button>
+  <div class="docs-shell">
+    <aside class="docs-sidebar" data-sidebar></aside>
+    <div class="docs-workspace">
+      <header class="docs-topbar">
+        <div class="topbar-inner">
+          <nav class="topbar-links" aria-label="Product surfaces">
+            <a href="https://docs.iai.one" target="_blank" rel="noreferrer">Docs</a>
+            <a href="https://home.iai.one" target="_blank" rel="noreferrer">Home</a>
+            <a href="https://flow.iai.one" target="_blank" rel="noreferrer">Flow</a>
+            <a href="https://app.iai.one" target="_blank" rel="noreferrer">App</a>
+            <a href="https://developer.iai.one" target="_blank" rel="noreferrer">Developer</a>
+          </nav>
+          <div class="topbar-actions">
+            <button class="topbar-action" type="button" data-search-open>Search</button>
+            <a class="topbar-action" href="/service-registry/">Registry</a>
+            <button class="menu-button" type="button" data-sidebar-toggle>Menu</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="docs-layout">
+        <main class="doc-page">
+          <article class="doc-content">
+            <section class="doc-hero hero-card">
+              <span class="eyebrow">Governance</span>
+              <h1 class="page-title">Owner Checklist</h1>
+              <p class="page-intro">Every public surface in the ecosystem needs an owner, a documentation boundary, and a release-time checklist. This page is the shared contract for teams maintaining help and docs across iai.one.</p>
+            </section>
+
+            <section class="doc-section card" id="minimum-docs-kit">
+              <h2>Minimum Docs Kit For Every Surface</h2>
+              <ul class="checklist">
+                <li>Purpose: what the surface exists to do.</li>
+                <li>Boundary: what it owns and what it does not own.</li>
+                <li>Entry route: apex, <code>www</code>, redirect, or route-only API.</li>
+                <li>Auth model and support path if the surface is operational or developer-facing.</li>
+                <li>Links back to relevant pages on <code>docs.iai.one</code>.</li>
+              </ul>
+            </section>
+
+            <section class="doc-section card" id="surface-matrix">
+              <h2>Surface Matrix</h2>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Surface</th>
+                      <th>Owner Focus</th>
+                      <th>Must Document</th>
+                      <th>Must Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>iai.one</code></td>
+                      <td>Charter team</td>
+                      <td>Constitutional role, public narrative, next-step routing.</td>
+                      <td><a href="/iai-one/">iai.one docs</a>, <a href="/home-surface/">portal docs</a>, <a href="/service-registry/">registry</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>home.iai.one</code></td>
+                      <td>Portal team</td>
+                      <td>Entry routes, product map, audience routing.</td>
+                      <td><a href="/home-surface/">home docs</a>, <a href="/getting-started/">getting started</a>, <a href="/ecosystem/">ecosystem</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>app.iai.one</code></td>
+                      <td>Operator app team</td>
+                      <td>Workspace modes, review flows, operator actions.</td>
+                      <td><a href="/app/">app docs</a>, <a href="/api/">API</a>, <a href="/mail/">mail</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>flow.iai.one</code></td>
+                      <td>Builder team</td>
+                      <td>Node system, execution model, runtime logs, walkthrough.</td>
+                      <td><a href="/flow/">flow docs</a>, <a href="/deployment/">deployment</a>, <a href="/api/">API</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>dash.iai.one</code></td>
+                      <td>Dashboard team</td>
+                      <td>Apex vs <code>/dashboard/</code>, dashboard modules, metrics sources.</td>
+                      <td><a href="/dash/">dash docs</a>, <a href="/api/">API</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>developer.iai.one</code></td>
+                      <td>Developer platform team</td>
+                      <td>Auth, SDKs, webhooks, node or extension authoring.</td>
+                      <td><a href="/developer/">developer docs</a>, <a href="/api/">API</a>, <a href="/sdk/">SDK</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>mail.iai.one</code></td>
+                      <td>Mail ops team</td>
+                      <td>Mail UI boundary, send API, alert ownership, admin path.</td>
+                      <td><a href="/mail/">mail docs</a>, <a href="/security/">security</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>api.iai.one</code></td>
+                      <td>Platform API team</td>
+                      <td>Current route groups, auth, response shapes, change policy.</td>
+                      <td><a href="/api/">API</a>, <a href="/developer/">developer</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>api.flow.iai.one</code></td>
+                      <td>Flow engine team</td>
+                      <td>Route-level contracts, error envelopes, engine auth.</td>
+                      <td><a href="/api/">API</a>, <a href="/flow/">flow docs</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>noos.iai.one</code></td>
+                      <td>NOOS team</td>
+                      <td>Governance, meta-architecture, route map, branding consistency.</td>
+                      <td><a href="/noos/">NOOS</a>, <a href="/ecosystem/">ecosystem</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>cios.iai.one</code></td>
+                      <td>CIOS team</td>
+                      <td>Shell vs backend split, health routes, deployment boundary.</td>
+                      <td><a href="/cios/">CIOS</a>, <a href="/noos/">NOOS</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>cdn.iai.one</code></td>
+                      <td>Infra team</td>
+                      <td>DNS, cache policy, asset path taxonomy, versioning.</td>
+                      <td><a href="/cdn/">cdn docs</a>, <a href="/security/">security</a></td>
+                    </tr>
+                    <tr>
+                      <td><code>flows.iai.one</code></td>
+                      <td>Automation team</td>
+                      <td>n8n boundary, auth, webhook policy, incident model.</td>
+                      <td><a href="/flows-automation/">flows docs</a>, <a href="/flow/">flow docs</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="doc-section card" id="release-checks">
+              <h2>Release-Time Checks</h2>
+              <ul class="checklist">
+                <li>If a public route changes, update docs the same day.</li>
+                <li>If auth or onboarding changes, update both the user-facing explainer and the technical guide.</li>
+                <li>If a hostname is not publicly live, mark it as planned instead of implying availability.</li>
+                <li>If help links are added to a product surface, they must point to the canonical page on <code>docs.iai.one</code>.</li>
+              </ul>
+            </section>
+          </article>
+
+          <footer class="doc-footer">
+            <div data-page-nav></div>
+          </footer>
+        </main>
+
+        <aside class="docs-outline" data-outline></aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/docs-config.js"></script>
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/search.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
