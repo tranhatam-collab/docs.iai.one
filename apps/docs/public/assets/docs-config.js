@@ -87,6 +87,38 @@ window.IAIDocs = {
       ]
     },
     {
+      id: "dash",
+      title: "Dashboard Surface",
+      shortTitle: "Dash",
+      path: "/dash/",
+      category: "Systems",
+      description: "The dashboard shell at dash.iai.one and its route ownership, redirect behavior, and role in operator analytics.",
+      keywords: [
+        "dash",
+        "dashboard",
+        "dashboard shell",
+        "analytics",
+        "redirect",
+        "operations"
+      ]
+    },
+    {
+      id: "developer",
+      title: "Developer Portal",
+      shortTitle: "Developer",
+      path: "/developer/",
+      category: "Systems",
+      description: "The developer-facing portal for APIs, SDKs, webhooks, and node-development guidance.",
+      keywords: [
+        "developer",
+        "developer portal",
+        "sdk",
+        "webhooks",
+        "node development",
+        "integration"
+      ]
+    },
+    {
       id: "mail",
       title: "Mail System",
       shortTitle: "Mail",
@@ -152,6 +184,38 @@ window.IAIDocs = {
       ]
     },
     {
+      id: "noos",
+      title: "NOOS",
+      shortTitle: "NOOS",
+      path: "/noos/",
+      category: "Platform",
+      description: "Civilization Operating System docs: meta-architecture, governance, system map, and operating-model alignment.",
+      keywords: [
+        "noos",
+        "civilization os",
+        "governance",
+        "system map",
+        "meta architecture",
+        "roadmap"
+      ]
+    },
+    {
+      id: "cios",
+      title: "CIOS",
+      shortTitle: "CIOS",
+      path: "/cios/",
+      category: "Platform",
+      description: "Customer Intelligence OS docs: control-layer shell, backend foundation, and relation to NOOS, Flow, and App.",
+      keywords: [
+        "cios",
+        "customer intelligence os",
+        "control layer",
+        "backend foundation",
+        "health endpoints",
+        "pages shell"
+      ]
+    },
+    {
       id: "sdk",
       title: "SDK",
       shortTitle: "SDK",
@@ -188,15 +252,35 @@ window.IAIDocs = {
       shortTitle: "Ecosystem",
       path: "/ecosystem/",
       category: "Overview",
-      description: "How home.iai.one, app.iai.one, flow.iai.one, mail.iai.one, and docs.iai.one connect.",
+      description: "How home.iai.one, app.iai.one, flow.iai.one, nft.iai.one, mail.iai.one, and docs.iai.one connect.",
       keywords: [
         "ecosystem",
         "home",
         "app",
         "flow",
+        "nft",
         "mail",
         "docs",
         "system map"
+      ]
+    },
+    {
+      id: "service-registry",
+      title: "Service Registry",
+      shortTitle: "Registry",
+      path: "/service-registry/",
+      category: "Overview",
+      description: "Observed domain map for iai.one, home, app, flow, API, dashboard, developer, NOOS, CIOS, mail, CDN, and automations.",
+      keywords: [
+        "service registry",
+        "domain map",
+        "iai one",
+        "dash",
+        "developer",
+        "noos",
+        "cios",
+        "cdn",
+        "flows"
       ]
     },
     {
@@ -233,18 +317,23 @@ window.IAIDocs = {
   nav: [
     {
       title: "Overview",
-      pageIds: ["home", "getting-started", "architecture", "ecosystem"]
+      pageIds: ["home", "getting-started", "architecture", "ecosystem", "service-registry"]
     },
     {
       title: "Systems",
-      pageIds: ["app", "flow", "mail", "api", "sdk", "use-cases"]
+      pageIds: ["app", "dash", "developer", "flow", "mail", "api", "sdk", "use-cases"]
     },
     {
       title: "Platform",
-      pageIds: ["security", "deployment", "faq", "changelog"]
+      pageIds: ["security", "deployment", "noos", "cios", "faq", "changelog"]
     }
   ],
   ecosystemLinks: [
+    {
+      label: "iai.one",
+      href: "https://iai.one",
+      description: "Wix charter and constitutional entry surface."
+    },
     {
       label: "home.iai.one",
       href: "https://home.iai.one",
@@ -261,6 +350,31 @@ window.IAIDocs = {
       description: "Workflow builder and runtime engine."
     },
     {
+      label: "dash.iai.one",
+      href: "https://dash.iai.one",
+      description: "Dashboard shell and dashboard redirect surface."
+    },
+    {
+      label: "developer.iai.one",
+      href: "https://developer.iai.one",
+      description: "Developer portal for APIs, SDKs, and node development."
+    },
+    {
+      label: "noos.iai.one",
+      href: "https://noos.iai.one",
+      description: "Civilization OS meta-architecture and governance layer."
+    },
+    {
+      label: "cios.iai.one",
+      href: "https://cios.iai.one",
+      description: "Customer Intelligence OS control-layer shell."
+    },
+    {
+      label: "nft.iai.one",
+      href: "https://nft.iai.one",
+      description: "Public NFT registry, proof surface, and crypto asset disclosure layer."
+    },
+    {
       label: "mail.iai.one",
       href: "https://mail.iai.one",
       description: "Communication and notification layer."
@@ -269,6 +383,11 @@ window.IAIDocs = {
       label: "api.iai.one",
       href: "https://api.iai.one",
       description: "Platform API gateway and service surface."
+    },
+    {
+      label: "api.flow.iai.one",
+      href: "https://api.flow.iai.one",
+      description: "Dedicated Flow Engine API worker surface."
     }
   ]
 };

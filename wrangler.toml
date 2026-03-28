@@ -1,5 +1,6 @@
 "$schema" = "./node_modules/wrangler/config-schema.json"
 name = "docs-iai-one"
+account_id = "f3f9e76222dcb488d5e303e29e8ba192"
 pages_build_output_dir = "./apps/docs/public"
 compatibility_date = "2026-03-15"
 send_metrics = false

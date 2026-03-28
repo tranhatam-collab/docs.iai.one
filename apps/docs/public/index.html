@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>IAI Documentation</title>
-  <meta name="description" content="The central documentation hub for IAI workflows, communication, operator surfaces, API architecture, and deployment." />
+  <meta name="description" content="The central documentation hub for the full iai.one system: charter, portal, app, flow, APIs, dashboard, developer portal, NOOS, CIOS, mail, CDN, and automations." />
   <meta name="theme-color" content="#050816" />
   <meta name="color-scheme" content="dark" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -12,12 +12,12 @@
   <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="IAI Documentation" />
-  <meta property="og:description" content="Infrastructure docs for AI workflows, communication, app surfaces, APIs, and deployment." />
+  <meta property="og:description" content="System documentation for iai.one, home, app, flow, APIs, dashboard, developer portal, NOOS, CIOS, mail, CDN, and automation surfaces." />
   <meta property="og:url" content="https://docs.iai.one/" />
   <meta property="og:image" content="https://docs.iai.one/assets/og-docs.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="IAI Documentation" />
-  <meta name="twitter:description" content="Infrastructure docs for AI workflows, communication, app surfaces, APIs, and deployment." />
+  <meta name="twitter:description" content="System documentation for iai.one, home, app, flow, APIs, dashboard, developer portal, NOOS, CIOS, mail, CDN, and automation surfaces." />
   <meta name="twitter:image" content="https://docs.iai.one/assets/og-docs.svg" />
   <link rel="stylesheet" href="/assets/docs.css" />
 </head>
@@ -59,13 +59,18 @@
                 <a class="tag-link" href="/architecture/">Architecture-first</a>
                 <a class="tag-link" href="/security/">No tracking</a>
                 <a class="tag-link" href="/deployment/">Cloudflare-native deploy</a>
+                <a class="tag-link" href="/service-registry/">Full domain registry</a>
               </div>
             </section>
 
             <section class="doc-section card" id="what-is-iai">
               <h2>What Is IAI</h2>
-              <p>IAI is a connected system of workflow execution, communication delivery, operator control, and core infrastructure. This docs site is the single place to understand how those surfaces fit together.</p>
+              <p>IAI is a connected system of charter surfaces, workflow execution, communication delivery, operator control, developer interfaces, control layers, and core infrastructure. This docs site is the single place to understand how those surfaces fit together.</p>
               <div class="grid-3">
+                <article class="card">
+                  <h3>Charter + Entry</h3>
+                  <p><a href="https://iai.one" target="_blank" rel="noreferrer"><strong>iai.one</strong></a> and <a href="https://home.iai.one" target="_blank" rel="noreferrer"><strong>home.iai.one</strong></a> define the constitutional root and the portal entry into the system.</p>
+                </article>
                 <article class="card">
                   <h3>AI Workflow Engine</h3>
                   <p><a href="https://flow.iai.one" target="_blank" rel="noreferrer"><strong>flow.iai.one</strong></a> provides the visual builder, node graph, execution runtime, and automation layer.</p>
@@ -75,8 +80,8 @@
                   <p><a href="https://mail.iai.one" target="_blank" rel="noreferrer"><strong>mail.iai.one</strong></a> handles transactional email, notifications, and system alerts coming out of flows and services.</p>
                 </article>
                 <article class="card">
-                  <h3>Core Infrastructure</h3>
-                  <p><a href="https://home.iai.one" target="_blank" rel="noreferrer"><strong>home.iai.one</strong></a> frames the overall platform vision, while <a href="https://app.iai.one" target="_blank" rel="noreferrer"><strong>app.iai.one</strong></a> becomes the operator-facing control surface.</p>
+                  <h3>Operator + Control Surfaces</h3>
+                  <p><a href="https://app.iai.one" target="_blank" rel="noreferrer"><strong>app.iai.one</strong></a>, <a href="https://dash.iai.one" target="_blank" rel="noreferrer"><strong>dash.iai.one</strong></a>, <a href="https://noos.iai.one" target="_blank" rel="noreferrer"><strong>noos.iai.one</strong></a>, and <a href="https://cios.iai.one" target="_blank" rel="noreferrer"><strong>cios.iai.one</strong></a> cover operator control, dashboards, and higher-order control layers.</p>
                 </article>
               </div>
             </section>
@@ -149,6 +154,14 @@
                   <h3>Operator App</h3>
                   <p>See how app.iai.one fits as the control surface for review and operations.</p>
                 </a>
+                <a class="quick-link" href="/dash/">
+                  <h3>Dashboard Surface</h3>
+                  <p>Clarify the role of dash.iai.one, dashboard routing, and analytics ownership.</p>
+                </a>
+                <a class="quick-link" href="/developer/">
+                  <h3>Developer Portal</h3>
+                  <p>Understand how developer.iai.one should own integrations, SDKs, and webhooks.</p>
+                </a>
                 <a class="quick-link" href="/api/">
                   <h3>API Docs</h3>
                   <p>Base URL, auth model, endpoint groups, and response contracts.</p>
@@ -157,11 +170,32 @@
                   <h3>Security Model</h3>
                   <p>Strict CSP, no analytics, no external scripts, Cloudflare-native stack.</p>
                 </a>
+                <a class="quick-link" href="/noos/">
+                  <h3>NOOS</h3>
+                  <p>Read the Civilization Operating System layer, governance, and strategic map.</p>
+                </a>
+                <a class="quick-link" href="/cios/">
+                  <h3>CIOS</h3>
+                  <p>See how the control-layer shell and backend foundation fit into the system.</p>
+                </a>
                 <a class="quick-link" href="/ecosystem/">
                   <h3>Ecosystem Map</h3>
                   <p>See how home, app, flow, mail, docs, and API surfaces connect.</p>
                 </a>
+                <a class="quick-link" href="/service-registry/">
+                  <h3>Service Registry</h3>
+                  <p>Audit the full domain map, stack ownership, live status, and unresolved DNS surfaces.</p>
+                </a>
               </div>
+            </section>
+
+            <section class="doc-section card" id="observed-domain-status">
+              <h2>Observed Domain Status</h2>
+              <div class="note is-warning">
+                <strong>Checked on March 28, 2026</strong>
+                <p>The docs now track the live status of each listed domain. At this snapshot, <code>cdn.iai.one</code> and <code>flows.iai.one</code> do not resolve publicly, and <code>api.flow.iai.one</code> is reachable but returns a 404 JSON response at root.</p>
+              </div>
+              <p><a href="/service-registry/"><strong>Open the full service registry</strong></a> to review every surface, stack, and ownership boundary in one place.</p>
             </section>
 
             <section class="doc-section card" id="designed-for">
@@ -192,6 +226,7 @@
                   <h3>Core Reading Path</h3>
                   <ul class="checklist">
                     <li>Start with <a href="/getting-started/"><strong>Getting Started</strong></a>.</li>
+                    <li>Use <a href="/service-registry/"><strong>Service Registry</strong></a> to orient around the full iai.one domain map.</li>
                     <li>Move to <a href="/architecture/"><strong>Architecture</strong></a> for the four-layer model.</li>
                     <li>Use <a href="/flow/"><strong>Flow</strong></a> and <a href="/mail/"><strong>Mail</strong></a> to understand execution and communication behavior.</li>
                     <li>Finish with <a href="/deployment/"><strong>Deployment</strong></a> and <a href="/security/"><strong>Security</strong></a> before production rollout.</li>
